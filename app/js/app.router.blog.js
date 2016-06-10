@@ -76,9 +76,17 @@ angular.module('app')
                         url: '/blog/blog-add',
                         templateUrl: 'partials/blo-blog-add.html',
                         resolve: {
-                            deps: ['uiLoad',
-                                function(uiLoad) {
-                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
+                            deps: ['uiLoad', '$ocLazyLoad',
+                                function(uiLoad, $ocLazyLoad) {
+                                    return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']).then(
+                                        function () {
+                                            return $ocLazyLoad.load('cgNotify').then(
+                                                function() {
+                                                    return $ocLazyLoad.load('js/controllers/formCtrl.js');
+                                                }
+                                            );
+                                        }
+                                    );
                                 }
                             ]
                         }

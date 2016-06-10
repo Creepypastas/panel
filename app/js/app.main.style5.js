@@ -2,14 +2,14 @@
 angular.module('app').controller('AppCtrl', ['$scope',
     function($scope) {
 
-        var menufold = false; 
+        var menufold = true;
         var screenWidth = window.innerWidth;
         if (screenWidth < 767){
             var menufold = true; 
         }
 
         $scope.app = {            
-            name: 'Slant Admin - Angular | Blog',
+            name: 'Panel | creepypastas.com',
             version: '4.0.0',
             type: 'blog',
             color: {
