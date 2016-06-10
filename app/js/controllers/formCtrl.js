@@ -95,19 +95,25 @@ app.controller('formCtrl', ['$scope', '$http', 'notify', function ($scope, $http
             console.log("app::toastrAll::toasting errors");
             for (var error in data.errors) {
                 if (data.errors.hasOwnProperty(error) && typeof error == 'string') {
-                    notify(error);
+                    notify({
+                        messageTemplate: '<span><b>Error</b>: ' + data.errors[error] + '</span>'
+                    });
                 }
             }
         }
 
         if (true === data.success && typeof data.post_id == 'number') {
             console.log("app::toastrAll::toasting success");
-            notify('Id de tu envío: ' + data.post_id, '¡Aporte guardado!');
+            notify({
+                messageTemplate: '<span><b>¡Aporte guardado!</b> con el id: ' + data.post_id + '</span>'
+            });
         }
 
         if (typeof data.error == 'undefined' && typeof data.success == 'undefined') {
             console.log("app::toastrAll::toasting ups");
-            notify('¡Ups!', 'Algo extraño sucede, por favor envíanos un email');
+            notify({
+                messageTemplate: '<span><b>¡Ups!</b>, Algo extraño sucede, por favor envíanos un email</span>'
+            });
         }
 
     }
