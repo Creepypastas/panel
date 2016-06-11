@@ -80,7 +80,7 @@ angular.module('app')
                                 function (uiLoad, $ocLazyLoad) {
                                     return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']).then(
                                         function () {
-                                            return $ocLazyLoad.load('cgNotify').then(
+                                            return $ocLazyLoad.load(['cgNotify', 'js/services/user.js', 'js/services/UserCommands.js']).then(
                                                 function () {
                                                     return $ocLazyLoad.load('js/controllers/formCtrl.js');
                                                 }

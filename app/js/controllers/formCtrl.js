@@ -7,7 +7,7 @@
  *
  * @requires $scope
  * */
-app.controller('formCtrl', ['$scope', '$http', 'notify', function ($scope, $http, notify) {
+app.controller('formCtrl', ['$scope', '$http', 'notify', 'UserCommands', function ($scope, $http, notify, userCommands) {
     var formCtrl = this;
     formCtrl.post = {
         title: '',
@@ -70,22 +70,17 @@ app.controller('formCtrl', ['$scope', '$http', 'notify', function ($scope, $http
     };
 
     formCtrl.sendCommand = function (command) {
-
-        $http({
-            url: 'https://creepypastas.com/comand',
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            data: {user: formCtrl.currentUser, post: formCtrl.post, command: command}
-        }).then(function success(res) {
-            console.log("updatePost::response");
-            console.log(res.data);
-            formCtrl.response = res.data;
-            formCtrl.toastrAll(res.data);
-        }, function error(res) {
-            console.error("updatePost::response");
-            console.error(res.data);
-            formCtrl.response = res.data;
-        });
+        userCommands.sendPostCommand(formCtrl.currentUser, formCtrl.post, command)
+            .then(function success(res) {
+                console.log("updatePost::response");
+                console.log(res.data);
+                formCtrl.response = res.data;
+                formCtrl.toastrAll(res.data);
+            }, function error(res) {
+                console.error("updatePost::response");
+                console.error(res.data);
+                formCtrl.response = res.data;
+            });
     };
 
     formCtrl.toastrAll = function (data) {
