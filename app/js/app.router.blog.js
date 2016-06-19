@@ -9,7 +9,7 @@ angular.module('app')
             function ($stateProvider, $urlRouterProvider, JQ_CONFIG) {
 
                 $urlRouterProvider
-                    .otherwise('/app/blog/dashboard');
+                    .otherwise('/access/login');
                 $stateProvider
 
                     .state('app', {
