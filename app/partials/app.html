@@ -1,9 +1,9 @@
-  <!-- header --> 
-  <div data-ng-include=" 'partials/components/topbar.html' " class="page-topbar {{app.settings.menuFolded ? 'sidebar_shift' : ''}} {{app.settings.chatFolded ? '' : 'chat_shift'}}"> 
+  <!-- header -->
+  <div data-ng-include=" 'partials/components/topbar.html' " class="page-topbar {{app.settings.menuFolded ? 'sidebar_shift' : ''}} {{app.settings.chatFolded ? '' : 'chat_shift'}}">
   </div>
   <!-- / header -->
 
-  
+
 <!-- START CONTAINER -->
 
 <div class="page-container row-fluid" ui-sectionbox ng-controller="ModalDemoCtrl">
@@ -30,12 +30,6 @@
     </section>
     <!-- END CONTENT -->
 
-  <!-- rightsidebar start-->
-  <div data-ng-include=" 'partials/components/rightbar.html' " class="page-chatapi {{app.settings.chatFolded ? 'hideit' : 'showit'}}">
-  </div>
-
-	<div class="chatapi-windows {{app.settings.chatFolded ? 'hideit' : 'showit'}}"></div>
-  <!-- rightsidebar end -->
 
 
   <!-- footer -->
@@ -52,5 +46,3 @@
   <div data-ng-include=" 'partials/components/footer.html' ">
   </div>
   <!-- / footer -->
-
-

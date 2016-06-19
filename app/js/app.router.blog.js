@@ -72,7 +72,7 @@ angular.module('app')
                         url: '/creepypastas/view',
                         templateUrl: 'partials/blo-blog-item.html'
                     })
-                    .state('app.blo-blog-add', {
+                    .state('app.creepypastas-add', {
                         url: '/creepypastas/enviar',
                         templateUrl: 'partials/blo-blog-add.html',
                         resolve: {

@@ -16,7 +16,7 @@ app.controller('LoginFormController', ['$scope', '$http', '$state', 'notify', 'u
           notify({
               messageTemplate: '<span>' + response.data.res + '</span>'
           });
-          $state.go('app.blo-blog-add');
+          $state.go('app.creepypastas-add');
         }
       }, function(x) {
         $scope.authError = 'Error del servidor';

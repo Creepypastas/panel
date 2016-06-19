@@ -1,5 +1,4 @@
 app.factory('user', ['UserCommands', function (userCommands) {
-    var path = 'https://creepypastas.com/comand';
     var usr = {
         currentUser: {
             username: '',
