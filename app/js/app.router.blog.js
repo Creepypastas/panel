@@ -289,8 +289,12 @@ angular.module('app')
                         resolve: {
                             deps: ['uiLoad',
                                 function (uiLoad) {
-                                    return uiLoad.load(['js/services/user.js','js/controllers/login.js',
-                                        '../bower_components/font-awesome/css/font-awesome.css']);
+                                    return uiLoad.load([
+                                      'js/services/UserCommands.js',
+                                      'js/services/user.js',
+                                      'js/controllers/login.js',
+                                      '../bower_components/font-awesome/css/font-awesome.css'
+                                    ]);
                                 }
                             ]
                         }

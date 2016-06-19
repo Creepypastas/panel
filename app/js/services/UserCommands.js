@@ -2,6 +2,15 @@ app.factory('UserCommands', ['$http', function ($http) {
     var path = 'https://creepypastas.com/comand';
     var userCommands = {};
 
+    userCommands.sendCommand = function (u, command) {
+        return $http({
+            url: path,
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            data: {user: u, post: {}, command: command}
+        });
+    };
+
     userCommands.sendPostCommand = function (user, post, command) {
         return $http({
             url: path,

@@ -10,7 +10,7 @@ app.controller('LoginFormController', ['$scope', '$http', '$state', 'user', func
       // Try to login
       user.login()
       .then(function(response) {
-        if ( !response.data.success ) {
+        if ( response.data.res != 'Welcome to the jungle!:') {
           $scope.authError = 'Usuario o contraseña incorrectos.';
         }else{
           $state.go('app.blo-blog-add');
