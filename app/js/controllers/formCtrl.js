@@ -7,7 +7,7 @@
  *
  * @requires $scope
  * */
-app.controller('formCtrl', ['$scope', '$http', 'notify', 'UserCommands', function ($scope, $http, notify, userCommands) {
+app.controller('formCtrl', ['$scope', '$http', 'notify', 'user', 'UserCommands', function ($scope, $http, notify, user, userCommands) {
     var formCtrl = this;
     formCtrl.post = {
         title: '',
@@ -17,10 +17,7 @@ app.controller('formCtrl', ['$scope', '$http', 'notify', 'UserCommands', functio
         tags: '',
         tagsList: ['etiquetas']
     };
-    formCtrl.currentUser = {
-        username: '',
-        p: ''
-    };
+    formCtrl.currentUser = user.currentUser;
 
     formCtrl.response = {
         error: undefined,
