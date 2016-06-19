@@ -2,7 +2,7 @@
 
 /* Controllers */
   // signin controller
-app.controller('LoginFormController', ['$scope', '$http', '$state', 'user', function($scope, $http, $state, user) {
+app.controller('LoginFormController', ['$scope', '$http', '$state', 'notify', 'user', function($scope, $http, $state, notify, user) {
     $scope.user = user.currentUser;
     $scope.authError = null;
     $scope.login = function() {
@@ -13,6 +13,9 @@ app.controller('LoginFormController', ['$scope', '$http', '$state', 'user', func
         if ( response.data.res != 'Welcome to the jungle!:') {
           $scope.authError = 'Usuario o contraseña incorrectos.';
         }else{
+          notify({
+              messageTemplate: '<span>' + response.data.res + '</span>'
+          });
           $state.go('app.blo-blog-add');
         }
       }, function(x) {

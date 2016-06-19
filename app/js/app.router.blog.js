@@ -227,16 +227,18 @@ angular.module('app')
                         url: '/login',
                         templateUrl: 'partials/ui-login.html',
                         resolve: {
-                            deps: ['uiLoad',
-                                function (uiLoad) {
-                                    return uiLoad.load([
-                                      'js/services/UserCommands.js',
-                                      'js/services/user.js',
-                                      'js/controllers/login.js',
-                                      '../bower_components/font-awesome/css/font-awesome.css'
-                                    ]);
-                                }
-                            ]
+                          deps: ['uiLoad', '$ocLazyLoad',
+                              function (uiLoad, $ocLazyLoad) {
+                                  return $ocLazyLoad.load(['cgNotify','js/services/user.js', 'js/services/UserCommands.js']).then(
+                                      function () {
+                                          return uiLoad.load([
+                                            'js/controllers/login.js',
+                                            '../bower_components/font-awesome/css/font-awesome.css'
+                                          ]);
+                                      }
+                                  );
+                              }
+                          ]
                         }
                     })
                     .state('access.register', {
