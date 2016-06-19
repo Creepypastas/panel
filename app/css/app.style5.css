@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto+Condensed:300|Open+Sans:700,300,600,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Roboto+Condensed:300|Open+Sans:700,300,600,400);
 
 
 
@@ -7,11 +7,11 @@
 Table of Contents:
 
 General Layout Style
-Page Title and Breadcrumb    
+Page Title and Breadcrumb
 Typography
 Page Loading Progress Bar
 Page Top Bar
-Sidebar Main Menu 
+Sidebar Main Menu
 Sidebar User Profile
 Sidebar Fixed Bottom Graphs
 Section or Content Box
@@ -32,7 +32,7 @@ Tabs
 UI Grid
 FULL UI Calendar
 Timeline Centered Style
-Pricing Tables 
+Pricing Tables
 jVector Maps
 Tables
 Data Tables
@@ -61,7 +61,7 @@ Form Wizard
 Carousel
 Visibility Animation in Elements (Viewport)
 Widget - Tile Counter
-Widget - Tile Progress widget 
+Widget - Tile Progress widget
 Navigation Bars
 Search page
 Blogs
@@ -86,7 +86,7 @@ CSS switches
 Sortable list and grid
 Bootstrap Touchspin
 Bootstrap Chosen
-Material Icons 
+Material Icons
 ------------------------------------------*/
 
 
@@ -557,7 +557,7 @@ ul {
 
 
 /*----------------------------------------
-    Page Title and Breadcrumb  
+    Page Title and Breadcrumb
 ------------------------------------------*/
 
 .page-head {
@@ -1373,7 +1373,7 @@ a:focus {
         right: 22px;
         left: auto;
     }
-    
+
     .page-topbar .quick-area .info-menu li .dropdown-menu {
         width: 290px;
     }
@@ -1622,7 +1622,7 @@ a:focus {
 
 #main-menu-wrapper li .sub-menu a:before {
     /*display: block;
-    
+
     width: 20px;
     height: 33px;
     background-color: transparent;
@@ -2568,7 +2568,7 @@ fieldset[disabled] .form-control {
 }
 
 .input-group.transparent .input-group-addon.input-focus {
-    background-color: #f8f8f8;  
+    background-color: #f8f8f8;
     border: 1px solid #5d7bf7;
     border-right: 0px;
 }
@@ -3143,7 +3143,7 @@ fieldset[disabled] .btn {
 
 
 /*------------------------------------
-     Modals 
+     Modals
  ------------------------------------*/
 
 .modalbuttons .btn {
@@ -3686,7 +3686,7 @@ fieldset[disabled] .btn {
 }
 
 /*---------------------------------------------
-  General Animation Settings    
+  General Animation Settings
 ----------------------------------------------*/
 
 .animated-duration-200ms {
@@ -3887,7 +3887,7 @@ fieldset[disabled] .btn {
 
 
 /*---------------------------------------------
-    Tooltips      
+    Tooltips
 ----------------------------------------------*/
 
 .tooltip {
@@ -4065,7 +4065,7 @@ fieldset[disabled] .btn {
 
 
 /*---------------------------------------------
-    Popovers     
+    Popovers
 ----------------------------------------------*/
 
 .popover {
@@ -5131,7 +5131,7 @@ fieldset[disabled] .btn {
 
 
 /*-----------------------------------------
-    Pricing Tables 
+    Pricing Tables
 ------------------------------------------*/
 
 .pricing-tables .price-pack.recommended .head {
@@ -6694,8 +6694,8 @@ code {
     top: 2px;
     width: 20px;
     height: 15px;
-    display: inline-block;   
-    margin-right: 5px; 
+    display: inline-block;
+    margin-right: 5px;
 }
 
 .graph_axis_color{
@@ -6968,7 +6968,7 @@ code {
 
 /*.page-sidebar.chat_shift #main-menu-wrapper .wraplist .sub-menu li.active a .arrow,
 .page-sidebar.collapseit #main-menu-wrapper .wraplist .sub-menu li.active a .arrow{
-    display: block !important;  
+    display: block !important;
 }*/
 
 .page-sidebar.chat_shift .profile-info,
@@ -7015,7 +7015,7 @@ code {
 
 
 /*
-#main-menu-wrapper li a:hover, 
+#main-menu-wrapper li a:hover,
 #main-menu-wrapper li.active a {
 background-color: #5d7bf7;
 }
@@ -8922,7 +8922,7 @@ border-left: 3px solid transparent;
 
 
 /*------------------------------------------
-    Widget - Tile Counter 
+    Widget - Tile Counter
 ---------------------------------------------*/
 
 .tile-counter {
@@ -8996,7 +8996,7 @@ border-left: 3px solid transparent;
 
 
 /*------------------------------------------
-    Widget - Tile Progress widget 
+    Widget - Tile Progress widget
 ---------------------------------------------*/
 
 .tile-progress {
@@ -9385,7 +9385,7 @@ border-left: 3px solid transparent;
 .ecommerce_product .thumb .overlay,
 .music_genre .thumb .overlay{
     color: #ffffff;
-    background-color: rgba(33,33,33,0.5);    
+    background-color: rgba(33,33,33,0.5);
     position: absolute;
     top:0px;
     left:0px;
@@ -11719,10 +11719,10 @@ videogular vg-mute-button .mute:before,
 
 .app-footer videogular,
 .app-footer [videogular]{
-    background-color: rgba(55,71,79,0.8);    
+    background-color: rgba(55,71,79,0.8);
 }
 
-.app-footer videogular vg-controls .controls-container, 
+.app-footer videogular vg-controls .controls-container,
 .app-footer [videogular] vg-controls .controls-container{
     background-color: transparent;
 }
@@ -11770,7 +11770,7 @@ top: -5px;
     .mobile-pagetitle h1{
         background-color: #ffffff;
         padding: 15px 0px 15px 15px;
-        font-size: 28px;        
+        font-size: 28px;
     }
 
 
@@ -11804,12 +11804,12 @@ top: -5px;
     }
 
     #main-content {
-        margin-left: 60px;        
+        margin-left: 60px;
         z-index: 999;
     }
 
     .page-sidebar{
-        z-index: 9999;    
+        z-index: 9999;
     }
 
     .content-wrapper{
@@ -11835,7 +11835,7 @@ top: -5px;
     .page-topbar .quickleft{
         position: fixed;
         top: 0px;
-        right: 150px;        
+        right: 150px;
     }
 
     .page-topbar .quick-area .info-menu li .dropdown-menu{
@@ -11849,7 +11849,7 @@ top: -5px;
         .page-topbar .quick-area .info-menu li .dropdown-menu:after{
         display: none;
     }
-    
+
     .page-topbar .quick-area .info-menu .open{
         background-color: #ffffff;
     }
@@ -11873,21 +11873,21 @@ top: -5px;
     .page-topbar .quickright{
         position: fixed;
         top: 0px;
-        right: 50px;        
+        right: 50px;
     }
 
     .info-menu .profile .profile-status, .profile-info .profile-image .profile-status{
-        border-color: transparent;   
+        border-color: transparent;
         top: 3px !important;
-        left: 18px !important;     
+        left: 18px !important;
     }
 
     .page-topbar .quick-area .info-menu li.dropdown.profile{
-        top: -8px;        
+        top: -8px;
     }
 
     .page-topbar .quick-area .info-menu li.dropdown.profile a{
-        top: 8px;        
+        top: 8px;
     }
 
     .page-topbar.sidebar_shift .logo-area {
@@ -11950,6 +11950,6 @@ top: -5px;
 @media (max-width: 500px) {
 
     .page-topbar .quickleft{
-        display: none;      
+        display: none;
     }
 }
