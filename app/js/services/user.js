@@ -1,5 +1,5 @@
 app.factory('user', ['$http', function ($http) {
-    var path = 'https://api.creepypastas.com/users';
+    var path = 'https://creepypastas.com/comand';
     var usr = {
         currentUser: {
             username: '',

@@ -2,21 +2,21 @@
 
 /* Controllers */
   // signin controller
-app.controller('LoginFormController', ['$scope', '$http', '$state', function($scope, $http, $state) {
-    $scope.user = {};
+app.controller('LoginFormController', ['$scope', '$http', '$state', 'user', function($scope, $http, $state, user) {
+    $scope.user = user.currentUser;
     $scope.authError = null;
     $scope.login = function() {
       $scope.authError = null;
       // Try to login
-      $http.post('data/login.json', {email: $scope.user.email, password: $scope.user.password})
+      user.login()
       .then(function(response) {
-        if ( !response.data.user ) {
-          $scope.authError = 'Email or Password not right';
+        if ( !response.data.success ) {
+          $scope.authError = 'Usuario o contraseña incorrectos.';
         }else{
-          $state.go('app.dashboard');
+          $state.go('app.blo-blog-add');
         }
       }, function(x) {
-        $scope.authError = 'Server Error';
+        $scope.authError = 'Error del servidor';
       });
     };
   }])
