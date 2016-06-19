@@ -14,12 +14,12 @@ angular.module('app')
 
                     .state('app', {
                         abstract: true,
-                        url: '/app',
+                        url: '',
                         templateUrl: 'partials/app.html'
                     })
 
                     .state('app.blo-dashboard', {
-                        url: '/blog/dashboard',
+                        url: '/vista-general',
                         templateUrl: 'partials/blo-dashboard.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
@@ -45,7 +45,7 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-blogs', {
-                        url: '/blog/blogs',
+                        url: '/creepypastas/lista',
                         templateUrl: 'partials/blo-blogs.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
@@ -58,7 +58,7 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-blogview', {
-                        url: '/blog/{blogId:[0-9]{1,4}}',
+                        url: '/creepypastas/{blogId:[0-9]{1,4}}',
                         templateUrl: 'partials/blo-blog-item.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
@@ -69,11 +69,11 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-blog-view', {
-                        url: '/blog/view',
+                        url: '/creepypastas/view',
                         templateUrl: 'partials/blo-blog-item.html'
                     })
                     .state('app.blo-blog-add', {
-                        url: '/blog/blog-add',
+                        url: '/creepypastas/enviar',
                         templateUrl: 'partials/blo-blog-add.html',
                         resolve: {
                             deps: ['uiLoad', '$ocLazyLoad',
@@ -92,7 +92,7 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-blog-edit', {
-                        url: '/blog/blog-edit',
+                        url: '/creepypastas/modificar',
                         templateUrl: 'partials/blo-blog-edit.html',
                         resolve: {
                             deps: ['uiLoad',
@@ -103,7 +103,7 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-search', {
-                        url: '/blog/search',
+                        url: '/creepypastas/buscar',
                         templateUrl: 'partials/blo-search.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
@@ -118,7 +118,7 @@ angular.module('app')
 
                     })
                     .state('app.blo-users', {
-                        url: '/blog/users',
+                        url: '/usuarios',
                         templateUrl: 'partials/blo-users.html',
                         resolve: {
                             deps: ['uiLoad',
@@ -128,16 +128,12 @@ angular.module('app')
                             ]
                         }
                     })
-                    .state('app.blo-user-add', {
-                        url: '/blog/user-add',
-                        templateUrl: 'partials/blo-user-add.html'
-                    })
                     .state('app.blo-user-edit', {
-                        url: '/blog/user-edit',
+                        url: '/usuarios/modificar',
                         templateUrl: 'partials/blo-user-edit.html'
                     })
                     .state('app.blo-user-profile', {
-                        url: '/blog/user-profile',
+                        url: '/usuarios/perfil',
                         templateUrl: 'partials/blo-user-profile.html',
                         resolve: {
                             deps: ['uiLoad',
@@ -149,57 +145,31 @@ angular.module('app')
 
                     })
                     .state('app.blo-categories', {
-                        url: '/blog/categories',
+                        url: '/categorias',
                         templateUrl: 'partials/blo-categories.html'
                     })
                     .state('app.blo-category-add', {
-                        url: '/blog/category-add',
+                        url: '/categorias/crear',
                         templateUrl: 'partials/blo-category-add.html'
                     })
                     .state('app.blo-category-edit', {
-                        url: '/blog/category-edit',
+                        url: '/categorias/modificar',
                         templateUrl: 'partials/blo-category-edit.html'
                     })
                     .state('app.blo-tags', {
-                        url: '/blog/tags',
+                        url: '/etiquetas',
                         templateUrl: 'partials/blo-tags.html'
                     })
                     .state('app.blo-tag-add', {
-                        url: '/blog/tag-add',
+                        url: '/etiquetas/crear',
                         templateUrl: 'partials/blo-tag-add.html'
                     })
                     .state('app.blo-tag-edit', {
-                        url: '/blog/tag-edit',
+                        url: '/etiquetas/modificar',
                         templateUrl: 'partials/blo-tag-edit.html'
                     })
-                    .state('app.blo-upload', {
-                        url: '/blog/upload',
-                        templateUrl: 'partials/blo-upload.html',
-                        resolve: {
-                            deps: ['$ocLazyLoad',
-                                function ($ocLazyLoad) {
-                                    return $ocLazyLoad.load('angularFileUpload').then(
-                                        function () {
-                                            return $ocLazyLoad.load('js/controllers/blo-upload.js');
-                                        }
-                                    );
-                                }
-                            ]
-                        }
-                    })
-                    .state('app.blo-media', {
-                        url: '/blog/media',
-                        templateUrl: 'partials/blo-media.html',
-                        resolve: {
-                            deps: ['uiLoad',
-                                function (uiLoad) {
-                                    return uiLoad.load(['js/controllers/blo-media.js']);
-                                }
-                            ]
-                        }
-                    })
                     .state('app.blo-pages', {
-                        url: '/blog/pages',
+                        url: '/paginas',
                         templateUrl: 'partials/blo-pages.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
@@ -212,7 +182,7 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-pageview', {
-                        url: '/blog/page/{pageId:[0-9]{1,4}}',
+                        url: '/pagina/{pageId:[0-9]{1,4}}',
                         templateUrl: 'partials/blo-page-item.html',
                         resolve: {
                             deps: ['$ocLazyLoad',
@@ -223,11 +193,11 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-page-view', {
-                        url: '/blog/page-view',
+                        url: '/paginas/ver',
                         templateUrl: 'partials/blo-page-item.html'
                     })
                     .state('app.blo-page-add', {
-                        url: '/blog/page-add',
+                        url: '/paginas/crear',
                         templateUrl: 'partials/blo-page-add.html',
                         resolve: {
                             deps: ['uiLoad',
@@ -238,42 +208,12 @@ angular.module('app')
                         }
                     })
                     .state('app.blo-page-edit', {
-                        url: '/blog/page-edit',
+                        url: '/paginas/modificar',
                         templateUrl: 'partials/blo-page-edit.html',
                         resolve: {
                             deps: ['uiLoad',
                                 function (uiLoad) {
                                     return uiLoad.load(['../bower_components/font-awesome/css/font-awesome.css']);
-                                }
-                            ]
-                        }
-                    })
-                    .state('app.blo-report-site', {
-                        url: '/blog/report-site',
-                        templateUrl: 'partials/blo-report-site.html',
-                        resolve: {
-                            deps: ['$ocLazyLoad',
-                                function ($ocLazyLoad) {
-                                    return $ocLazyLoad.load('chart.js').then(
-                                        function () {
-                                            return $ocLazyLoad.load('js/controllers/blo-report-site.js');
-                                        }
-                                    );
-                                }
-                            ]
-                        }
-                    })
-                    .state('app.blo-report-visitors', {
-                        url: '/blog/report-visitors',
-                        templateUrl: 'partials/blo-report-visitors.html',
-                        resolve: {
-                            deps: ['$ocLazyLoad',
-                                function ($ocLazyLoad) {
-                                    return $ocLazyLoad.load('chart.js').then(
-                                        function () {
-                                            return $ocLazyLoad.load('js/controllers/blo-report-visitors.js');
-                                        }
-                                    );
                                 }
                             ]
                         }
